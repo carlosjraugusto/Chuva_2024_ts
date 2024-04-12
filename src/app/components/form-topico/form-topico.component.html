@@ -1,0 +1,34 @@
+<div class="py-4 z-50 block">
+  <p class="text-[15px] font-thin text-center pb-4">
+    Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!
+  </p>
+  <form (ngSubmit)="chamarEnviarForm()" class="btn-create-topic">
+      <div class="grid px-4">
+        <label for="subject" class="text-[15.5px] font-semibold text-orange-500">Assunto</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          class="subject border-gray-300 border-[1px] justify-center rounded-sm py-1.5"
+          placeholder="Defina um tópico sucinto para notificar os autores..."
+          [(ngModel)]="topic.subject"
+        >
+      </div>
+      <div class="grid px-4 pt-3">
+        <label for="content" class="text-[15.5px] font-semibold text-orange-500">Conteúdo</label>
+        <textarea
+          type="text"
+          id="content"
+          name="content"
+          class="border-gray-300 border-[1px] h-20 max-h-20 justify-center rounded-sm py-1.5"
+          [(ngModel)]="topic.content"
+        ></textarea>
+        <div class="flex justify-end border-gray-300 border-[1px] border-t-0 h-8 bg-gray-200">
+          <button type="submit" class="btn-send bg-gradient-to-b from-yellow-500 to-orange-600 rounded-sm text-white text-sm font-semibold h-full w-48">
+            Enviar
+          </button>
+        </div>
+      </div>
+    </form>
+</div>
+
